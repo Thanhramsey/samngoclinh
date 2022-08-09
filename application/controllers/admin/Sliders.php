@@ -42,11 +42,16 @@ class Sliders extends CI_Controller {
 		$this->load->library('session');
 		$this->load->library('alias');
 		$this->form_validation->set_rules('name', 'Tên hình ảnh', 'required');
+		$this->form_validation->set_rules('price', 'Giá', 'required');
+		$this->form_validation->set_rules('detail', 'Chi tiết', 'required');
 		if ($this->form_validation->run() == TRUE)
 		{
 			$mydata= array(
 				'name' =>$_POST['name'],
-				'type' =>$_POST['type'],
+				'spname'=>$_POST['name'],
+				'price'=>$_POST['price'],
+				'detail'=>$_POST['detail'],
+				'type' => 0,
 				'link' =>$string=$this->alias->str_alias($_POST['name']),
 				'created'=>$today,
 				'created_by'=>$this->session->userdata('id'),
@@ -57,7 +62,7 @@ class Sliders extends CI_Controller {
 			);
 			$config['upload_path']          = './public/assets/images/';
 			$config['allowed_types']        = 'gif|jpg|png|jpeg';
-			$config['max_size']             = 2000;
+			$config['max_size']             = 5000;
 			$this->load->library('upload', $config);
 			if ( $this->upload->do_upload('img'))
 			{
@@ -66,7 +71,7 @@ class Sliders extends CI_Controller {
 			}
 
 			$this->Msliders->slider_insert($mydata);
-			$this->session->set_flashdata('success', 'Thêm slider thành công');
+			$this->session->set_flashdata('success', 'Thêm sản phẩm thành công');
 			redirect('admin/sliders/','refresh');
 		}
 		else
@@ -80,9 +85,9 @@ class Sliders extends CI_Controller {
 	public function update($id)
 	{
 		$user_role=$this->session->userdata('sessionadmin');
-		if($user_role['role']==2){
-			redirect('admin/E403/index','refresh');
-		}
+		// if($user_role['role']==2){
+		// 	redirect('admin/E403/index','refresh');
+		// }
 		$this->data['row']=$this->Msliders->slider_detail($id);
 		$d=getdate();
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
@@ -90,19 +95,24 @@ class Sliders extends CI_Controller {
 		$this->load->library('session');
 		$this->load->library('alias');
 		$this->form_validation->set_rules('name', 'Tên sản phẩm', 'required');
+		$this->form_validation->set_rules('name', 'Tên hình ảnh', 'required');
+		$this->form_validation->set_rules('price', 'Giá', 'required');
+		$this->form_validation->set_rules('detail', 'Chi tiết', 'required');
 		if ($this->form_validation->run() == TRUE)
 		{
 			$mydata= array(
 				'name' =>$_POST['name'],
+				'spname'=>$_POST['name'],
+				'price'=>$_POST['price'],
+				'detail'=>$_POST['detail'],
 				'modified'=>$today,
 				'modified_by'=>$this->session->userdata('fullname'),
-				'type' =>$_POST['type'],
 				'trash'=>1,
 				'status'=>$_POST['status']
 			);
 			$config['upload_path']          = './public/assets/images/';
 			$config['allowed_types']        = 'gif|jpg|png|jpeg';
-			$config['max_size']             = 2000;
+			$config['max_size']             = 5000;
 			$this->load->library('upload', $config);
 			if ( $this->upload->do_upload('img'))
 			{

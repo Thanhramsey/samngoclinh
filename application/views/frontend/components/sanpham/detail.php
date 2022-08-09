@@ -103,7 +103,7 @@
 						<h3>Sản phẩm liên quan</h3>
 						<?php
 						$list_spcungloai = $this->Mproduct->product_cungloai($row['catid'], $row['id'], 5);?>
-						<?php 
+						<?php
 						if(count($list_spcungloai)>0):?>
 							<div class="product-container">
 								<div class="owl-carousel-product owl-carousel owl-theme">
@@ -154,7 +154,7 @@
 										<h4>Chưa có sản phẩm cùng loại</h4>
 									<?php endif; ?>
 								</div>
-							<?php endif; ?>	
+							<?php endif; ?>
 						</form>
 
 					</div>

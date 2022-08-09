@@ -13,18 +13,19 @@
     <!-- Page Title -->
     <title>Sâm Ngọc Linh Hạnh Dung</title>
     <!-- Favicon -->
-    <link href="public/vendor/img/favicon.ico" rel="icon">
+    <link href="<?php echo base_url() ?>/public/vendor/img/favicon.ico" rel="icon">
     <!-- Bundle -->
-    <link href="public/vendor/css/bundle.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/public/vendor/css/bundle.min.css" rel="stylesheet">
     <!-- Plugin Css -->
-    <link href="public/vendor/css/owl.carousel.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/vendor/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="public/vendor/css/swiper.min.css">
-    <link rel="stylesheet" href="public/vendor/css/LineIcons.min.css">
+    <link href="<?php echo base_url() ?>/public/vendor/css/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/public/vendor/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/public/vendor/css/swiper.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/public/vendor/css/LineIcons.min.css">
     <!-- Style Sheet -->
-    <link href="public/coffee/css/line-awesome.min.css" rel="stylesheet">
-    <link href="public/coffee/css/style.css" rel="stylesheet">
-    <link href="public/coffee/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/public/coffee/css/line-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/public/coffee/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/public/coffee/css/custom.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
@@ -61,15 +62,15 @@
                 <div class="row">
                     <div class="col-4 col-lg-2">
                         <a class="navbar-brand link scroll" href="trang-chu">
-                            <img src="public/coffee/images/logo.png" alt="logo">
+                            <img src="<?php echo base_url() ?>/public/coffee/images/logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="col-8 col-lg-10 simple-navbar d-flex align-items-center justify-content-end">
                         <nav class="navbar navbar-expand-lg">
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div class="navbar-nav ml-auto d-flex align-items-center">
-                                    <a class="nav-link home active link " href="trang-chu">Trang chủ</a>
-                                    <a class="nav-link link" href="tin-tuc">Tin tức</a>
+                                    <a class="nav-link home active link " href="<?php echo base_url() ?>trang-chu">Trang chủ</a>
+                                    <a class="nav-link link" href="<?php echo base_url() ?>tin-tuc">Tin tức</a>
                                     <span class="menu-line link"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                                 </div>
                             </div>
@@ -93,16 +94,16 @@
             <div class="container">
                 <div class="row w-100 side-menu-inner-content">
                     <div class="col-12 d-flex justify-content-center align-items-center text-center">
-                        <a href="index-coffee.html" class="navbar-brand"><img src="public/coffee/images/logo.png" alt="logo"></a>
+                        <a href="index-coffee.html" class="navbar-brand"><img src="<?php echo base_url() ?>/public/coffee/images/logo.png" alt="logo"></a>
                     </div>
                     <div class="col-12 col-lg-8 text-center text-lg-left">
                         <nav class="side-nav w-100">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="trang-chu">Trang chủ</a>
+                                    <a class="nav-link" href="<?php echo base_url() ?>trang-chu">Trang chủ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="tin-tuc">Tin tức</a>
+                                    <a class="nav-link" href="<?php echo base_url() ?>tin-tuc">Tin tức</a>
                                 </li>
                             </ul>
                         </nav>
@@ -132,47 +133,59 @@
 <!-- End Header -->
 
 <!-- Start Slider Section -->
-<section id="content">
-		<div class="container" style="margin-top:50px">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-content" id="list-content">
-				<div class="product-wrap">
-					<h2 style="border-bottom:2px solid black">
-						Tin tức
-					</h2>
-					<div class="fs-newsboxs">
-						<?php foreach ($list as $item) : ?>
-							<div class="fs-ne2-it clearfix" style="border-bottom:1px solid black; margin-bottom: 10px">
-								<div class="fs-ne2-if">
-									<a class="fs-ne2-img" href="tin-tuc/<?php echo $item['alias']; ?>">
-										<img style="width: 300px; height: 160px;" src="public/images/posts/<?php echo $item['img']; ?>">
-									</a>
-									<div class="fs-n2-info">
-										<h3 style="margin:10px 0px  !important"><a class="fs-ne2-tit" href="tin-tuc/<?php echo $item['alias']; ?>" title=""><?php echo $item['title']; ?></a></h3>
-										<div class="fs-ne2-txt"><?php echo $item['introtext']; ?></div>
-										<p class="fs-ne2-bot">
-											<span class="fs-ne2-user">
-												<img class="lazy" src="" style="">
-											</span>
-											<span>Đăng lúc: <?php echo $item['created']; ?></span>
-										</p>
+<section class="menu portfolio-three pb-0" id="menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 text-center wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="d-inline-block">
+                    <div class="mb-4"><img src="<?php echo base_url() ?>/public/coffee/images/gallery-border.png" alt="Border"></div>
+                    <!-- <h6 class="sub-title alt-font text-sec">Top quality coffee</h6> -->
+                    <h1 class="title main-font text-main my-5" ><strong>Sản phẩm của chúng tôi</strong></h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid">
+			<div class="row m-0">
+				<div class = "text-center pull-right">
+                    <ul class ="pagination">
+                      <?php echo $strphantrang; ?>
+                    </ul>
+                </div>
+			</div>
+            <div class="row m-0">
+				<?php foreach ($list as $sp) :?>
+
+					<div class="col-md-3 items graphic">
+						<div class="item-img">
+							<a href="<?php echo base_url() ?>ttsanpham/<?php echo $sp['id']; ?>">
+								<img src="<?php echo base_url() ?>/public/assets/images/<?php echo $sp['img']; ?>" alt="image" style="height:400px">
+								<div class="item-img-overlay valign">
+									<div class="overlay-info text-center">
+										<span class="image-hover mb-3"><i class="lni lni-gallery"></i></span>
+										<h5 class="text-white"><?php echo $sp['spname']; ?></h5>
+										<?php if($sp['price']==0): ?>
+											<p class="text-white">Giá: Liên Hệ !</p>
+										<?php else : ?>
+											<p class="text-white">Giá: <?php echo(number_format($sp['price'])); ?> VNĐ</p>
+										<?php endif; ?>
+
 									</div>
 								</div>
-
-							</div>
-						<?php endforeach; ?>
-
+							</a>
+						</div>
+						<div class=" mt-3 mb-3 text-center">
+							<a href="<?php echo base_url() ?>ttsanpham/<?php echo $sp['id']; ?>"> <strong>Chi tiết </strong></a>
+						</div>
 					</div>
-					<div class="row text-center">
-						<ul class="pagination">
-							<?php echo $strphantrang; ?>
-						</ul>
-					</div>
-				</div>
+				<!-- </div> -->
+				<?php endforeach; ?>
+                <!-- Menu Item 1 -->
+            </div>
 
-			</div>
-		</div>
-		</div>
-	</section>
+        </div>
+</section>
 <!-- End Contact Section -->
 
 <!-- Start Footer Section -->
@@ -228,20 +241,20 @@
 <!-- End Footer Section -->
 
 <!-- JavaScript -->
-<script src="public/vendor/js/bundle.min.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/bundle.min.js"></script>
 <!-- Plugin Js -->
-<script src="public/vendor/js/jquery.appear.js"></script>
-<script src="public/vendor/js/owl.carousel.min.js"></script>
-<script src="public/vendor/js/wow.min.js"></script>
-<script src="public/vendor/js/parallaxie.min.js"></script>
-<script src="public/vendor/js/jquery.fancybox.min.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/jquery.appear.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/owl.carousel.min.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/wow.min.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/parallaxie.min.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/jquery.fancybox.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4fusEY9kSwNHgtK8KOgyoTsyP5Tb2NXo"></script>
-<script src="public/coffee/js/map.js"></script>
+<script src="<?php echo base_url() ?>/public/coffee/js/map.js"></script>
 
 <!-- CUSTOM JS -->
-<script src="public/vendor/js/contact_us.js"></script>
-<script src="public/vendor/js/swiper.min.js"></script>
-<script src="public/coffee/js/script.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/contact_us.js"></script>
+<script src="<?php echo base_url() ?>/public/vendor/js/swiper.min.js"></script>
+<script src="<?php echo base_url() ?>/public/coffee/js/script.js"></script>
 </body>
 </html>

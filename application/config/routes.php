@@ -10,6 +10,12 @@ $route['san-pham/(:any)/(:num)'] = 'sanpham/category/$1';
 
 $route['tin-tuc/(:num)'] = 'tintuc/index/$1';
 $route['tin-tuc/(:any)'] = 'tintuc/detail';
+$route['sanpham'] = 'tintuc/sanpham';
+$route['sanpham/(:any)'] = 'tintuc/sanpham/$1';
+$route['ttsanpham/(:any)'] = 'tintuc/detailsp';
+
+
+
 $route['lien-he'] = 'lienhe/index';
 $route['tim-kiem'] = 'timkiem';
 $route['san-pham'] = 'sanpham/index';

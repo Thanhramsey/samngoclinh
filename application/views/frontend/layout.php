@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <!-- Author -->
-    <meta name="author" content="Themes Industry">
+    <!-- <meta name="author" content="Themes Industry"> -->
     <!-- description -->
-    <meta name="description" content="MegaOne is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose studio and portfolio HTML5 template with 8 ready home page demos.">
+    <!-- <meta name="description" content="MegaOne is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose studio and portfolio HTML5 template with 8 ready home page demos."> -->
     <!-- keywords -->
-    <meta name="keywords" content="Creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, studio, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, studio, masonry, grid, faq">
+    <!-- <meta name="keywords" content="Creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, studio, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, studio, masonry, grid, faq"> -->
     <!-- Page Title -->
-    <title>Coffee | MegaOne HTML5 Template</title>
+    <title>Sâm Ngọc Linh Hạnh Dung</title>
     <!-- Favicon -->
     <link href="public/vendor/img/favicon.ico" rel="icon">
     <!-- Bundle -->
@@ -73,7 +73,7 @@
                                     <a class="nav-link link scroll" href="#menu">Sản phẩm</a>
                                     <a class="nav-link link scroll" href="#reviews">Reviews</a>
                                     <a class="nav-link link scroll" href="#blog">Tin tức</a>
-                                    <a href="" class="btn button btn-medium btn-rounded btn-transparent ml-0 ml-lg-5" data-animation-duration="500" data-fancybox data-src="#animatedModal">Liên hệ ngay</a>
+                                    <a class="nav-link link scroll" href="#contact">Liên hệ ngay</a>
                                     <span class="menu-line link"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                                 </div>
                             </div>
@@ -117,8 +117,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link scroll" href="#blog">Tin tức</a>
                                 </li>
-                                <li class="get-started-btn">
-                                    <a href="" class="btn button btn-medium btn-rounded btn-transparent" data-animation-duration="500" data-fancybox data-src="#animatedModal">Order Now</a>
+                                <li class="nav-item">
+                                    <a class="nav-link link scroll" href="#contact">Liên hệ ngay</a>
                                 </li>
                             </ul>
                         </nav>
@@ -126,16 +126,15 @@
                     <div class="col-12 col-lg-4 d-flex align-items-center text-center text-lg-left">
                         <div class="side-footer text-white w-100">
                             <div class="menu-company-details">
-                                <span>+1 631 123 4567</span>
-                                <span>email@website.com</span>
+                                <span>761 Quang Trung, TT.Chư Ty,Huyện Đức Cơ</span>
+                                <span>032 742 7268</span>
                             </div>
                             <ul class="social-icons-simple">
-                                <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+                                <li><a class="facebook-text-hvr" target="_blank" href="https://www.facebook.com/H%E1%BA%A1nh-Dung-%C4%90%E1%BA%A7u-M%E1%BB%91i-S%C3%A2m-Ng%E1%BB%8Dc-Linh-110390721092653/?ref=pages_you_manage&gidzl=CnnOKg8r1Gut1rjTfYi42J81Mrsx9GG1U0aDKBuZK0Kh30zJltO2KdbTL07gT09JVGbL066d76zbfJ040G"><i class="fab fa-facebook-f"></i> </a> </li>
                                 <li><a class="twitter-text-hvr" href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
                                 <li><a class="youtube-text-hvr" href="javascript:void(0)"><i class="fab fa-youtube"></i> </a> </li>
                                 <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
                             </ul>
-                            <p class="text-white">&copy; 2020 MegaOne. Made With Love by Themesindustry</p>
                         </div>
                     </div>
                 </div>
@@ -145,58 +144,6 @@
     <a id="close_side_menu" href="javascript:void(0);"></a>
 
     <!--Get Started Model Popup-->
-    <div class="quote-content hidden animated-modal" id="animatedModal">
-        <!--Heading-->
-        <div class="pb-5 text-center">
-            <span class="text-pink font-weight-200 font-20">We are MegaOne Company</span>
-            <h2 class="main-font font-weight-600 text-sec mt-2">Place your Order Here</h2>
-        </div>
-        <!--Contact Form-->
-        <form class="contact-form" id="modal-contact-form-data">
-            <div class="row">
-                <!--Result-->
-                <div class="col-12" id="quote_result"></div>
-
-                <!--Left Column-->
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input class="form-control" id="quote_name" name="quoteName" placeholder="Name" required="" type="text">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" id="quote_contact" name="userPhone" placeholder="Contact #" required="" type="text">
-                    </div>
-                </div>
-
-                <!--Right Column-->
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input class="form-control" id="quote_email" name="userEmail" placeholder="Email" required="" type="email">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" id="quote_address" name="userAddress" placeholder="City / Block no" required="" type="text">
-                    </div>
-                </div>
-
-                <!--Full Column-->
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <textarea class="form-control" id="userMessage" name="userMessage"  placeholder="Please explain your order in detail."></textarea>
-                    </div>
-                </div>
-
-                <!--Button-->
-                <div class="col-md-12">
-                    <div class="form-check">
-                        <label class="checkbox-lable font-weight-200 font-16">Contact by phone is preferred
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <a href="javascript:void(0)" class="btn button btn-medium btn-rounded btn-grey modal_contact_btn" id="quote_submit_btn">Submit Now</a>
-                </div>
-            </div>
-        </form>
-    </div>
 </header>
 <!-- End Header -->
 
@@ -213,7 +160,7 @@
 						<div class="col-12 col-md-6 text-left text-md-left mb-0 mb-md-5">
                             <!-- <h1 class="main-font slider-heading">Best in Town <span class="d-block">Coffee House</span></h1>
                             <p class="alt-font slider-para py-2">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.  Lorem Ipsum has been the industry’s standard dummy.</p> -->
-                            <a href="#about" class="scroll btn button btn-medium btn-rounded section-btn mb-5">LEARN MORE</a>
+                            <a href="#about" class="scroll btn button btn-medium btn-rounded section-btn mb-5"><strong>Về chúng tôi</strong></a>
                         </div>
                     </div>
                 </div>
@@ -227,7 +174,7 @@
 						<div class="col-12 col-md-6 text-left text-md-left mb-0 mb-md-5">
                             <!-- <h1 class="main-font slider-heading">Best in Town <span class="d-block">Coffee House</span></h1>
                             <p class="alt-font slider-para py-2">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.  Lorem Ipsum has been the industry’s standard dummy.</p> -->
-                            <a href="#menu" class="scroll btn button btn-medium btn-rounded section-btn mb-5">LEARN MORE</a>
+                            <a href="#menu" class="scroll btn button btn-medium btn-rounded section-btn mb-5"><strong>Sản phẩm</strong></a>
                         </div>
                     </div>
                 </div>
@@ -241,7 +188,7 @@
                         <div class="col-12 col-md-6 text-left text-md-left mb-0 mb-md-5">
                             <!-- <h1 class="main-font slider-heading">Best in Town <span class="d-block">Coffee House</span></h1>
                             <p class="alt-font slider-para py-2">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.  Lorem Ipsum has been the industry’s standard dummy.</p> -->
-                            <a href="#reviews" class="scroll btn button btn-medium btn-rounded section-btn mb-5">LEARN MORE</a>
+                            <a href="#reviews" class="scroll btn button btn-medium btn-rounded section-btn mb-5"><strong>Reviews</strong></a>
                         </div>
                         <div class="col-12 col-md-6"></div>
                     </div>
@@ -306,7 +253,7 @@
                     </div>
                     <div class="col-12 col-lg-10 p-lg-0" style="padding-left:10px !important">
                         <h4 class="mb-3">Đội ngũ</h4>
-                        <p>Nhân viên chăm soc khách hàng chu đáo, tận tình.</p>
+                        <p>Nhân viên chăm sóc khách hàng chu đáo, tận tình.</p>
                     </div>
                 </div>
             </div>
@@ -405,6 +352,7 @@
                     <div class="mb-4"><img src="public/coffee/images/gallery-border.png" alt="Border"></div>
                     <!-- <h6 class="sub-title alt-font text-sec">Top quality coffee</h6> -->
                     <h2 class="title main-font text-main my-4">Sản phẩm của chúng tôi</h2>
+					<a href="sanpham" class="btn button btn-medium btn-rounded mb-1 section-btn"><strong>Tất cả sản phẩm</strong></a>
                     <!-- <p class="paragraph alt-font text-sec">Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.  Lorem Ipsum has been the industry’s standard dummy.</p> -->
                 </div>
             </div>
@@ -422,15 +370,19 @@
 						<img src="public/assets/images/<?php echo $sp['img']; ?>" class="img-responsive" alt="">
 					</a>
 				</div> -->
-				<div class="col-md-3 items graphic">
+				<div class="col-md-4 items graphic">
                     <div class="item-img">
                         <a href="public/assets/images/<?php echo $sp['img']; ?>" data-fancybox="images">
-                            <img src="public/assets/images/<?php echo $sp['img']; ?>" alt="image" style="height:300px">
+                            <img src="public/assets/images/<?php echo $sp['img']; ?>" alt="image" style="height:400px">
                             <div class="item-img-overlay valign">
                                 <div class="overlay-info text-center">
                                     <span class="image-hover mb-3"><i class="lni lni-gallery"></i></span>
-                                    <h5 class="text-white">Coffee Cup</h5>
-									<p class="text-white">Coffee Cup</p>
+                                    <h5 class="text-white"><?php echo $sp['spname']; ?></h5>
+									<?php if($sp['price']==0): ?>
+										<p class="text-white">Liên hệ!!</p>
+									<?php else : ?>
+										<p class="text-white">Giá: <?php echo(number_format($sp['price'])); ?> VNĐ</p>
+									<?php endif; ?>
                                 </div>
                             </div>
                         </a>
@@ -504,10 +456,10 @@
     <div class="row align-items-center">
         <div class="col-12 col-md-12 col-lg-6 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".8s">
             <div class="blog-context text-white">
-                <span class="d-block alt-font font-weight-normal pb-2">Dec 14, 2020</span>
-                <h2 class="main-font">Coffee Blogs</h2>
-                <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.  Lorem Ipsum has been the industry’s standard dummy.</p>
-                <a href="public/coffee/standalone.html" class="btn button btn-medium btn-rounded btn-transparent mb-5">Read Blog</a>
+                <span class="d-block alt-font font-weight-normal pb-2"><?php echo date("d/m/Y , h:i") ?></span>
+                <h2 class="main-font">Tin tức</h2>
+                <p>Cập nhật những tin tức mới nhất về cửa hàng.</p>
+                <a href="tin-tuc" class="btn button btn-medium btn-rounded btn-transparent mb-5">GO!!</a>
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 blog-background wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s"></div>
@@ -597,7 +549,7 @@
 			<div class="col-md-3 text-center">
                 <div class="footer-social">
 				<ul class="list-unstyled social-icons social-icons-simple">
-                        <li><a class="social-icon wow fadeInUp" href="javascript:void(0)"><i class="fab fa-facebook-f" aria-hidden="true"></i> </a> </li>
+                        <li><a class="social-icon wow fadeInUp" target="_blank" href="https://www.facebook.com/H%E1%BA%A1nh-Dung-%C4%90%E1%BA%A7u-M%E1%BB%91i-S%C3%A2m-Ng%E1%BB%8Dc-Linh-110390721092653/?ref=pages_you_manage&gidzl=CnnOKg8r1Gut1rjTfYi42J81Mrsx9GG1U0aDKBuZK0Kh30zJltO2KdbTL07gT09JVGbL066d76zbfJ040G"><i class="fab fa-facebook-f" aria-hidden="true"></i> </a> </li>
                         <li><a class="social-icon wow fadeInDown" href="javascript:void(0)"><i class="fab fa-twitter" aria-hidden="true"></i> </a> </li>
                         <li><a class="social-icon wow fadeInUp" href="javascript:void(0)"><i class="fab fa-google-plus-g" aria-hidden="true"></i> </a> </li>
                         <li><a class="social-icon wow fadeInUp" href="javascript:void(0)"><i class="fab fa-instagram" aria-hidden="true"></i> </a> </li>

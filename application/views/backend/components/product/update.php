@@ -1,5 +1,5 @@
 <?php echo form_open_multipart('admin/product/update/'.$row['id']); ?>
-<?php  
+<?php
 $list=$this->Mcategory->category_list();
 $option_parentid="";
 foreach ($list as $r) {
@@ -53,7 +53,7 @@ foreach ($listProducer as $r) {
 												<select name="catid" class="form-control">
 													<option value = "">[--Chọn loại sản phẩm--]</option>
 													<option value = "0">No Parent</option>
-													<?php  
+													<?php
 													echo $option_parentid;
 													?>
 												</select>

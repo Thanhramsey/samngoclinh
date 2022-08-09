@@ -21,44 +21,41 @@
                         <div class="col-md-9">
                             <!--ND-->
                             <div class="form-group">
-                                <label>Tên ảnh<span class = "maudo">(*)</span></label>
+                                <label>Tên sản phẩm<span class = "maudo">(*)</span></label>
                                 <input type="text" name="name" placeholder="Tên sliders" class="form-control">
                                 <div class="error" id="password_error"><?php echo form_error('name')?></div>
                             </div>
-                            <!--/.ND-->
 							<div class="form-group">
-                                <label>Loại ảnh </label>
-                                <select name="type" class="form-control">
-                                    <option value="1">Hình menu</option>
-                                    <option value="0">Hình quán</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
+                                    <label>Ảnh sản phẩm</label>
+                                    <input type="file"  id="image_list" name="img" onchange="loadFile(event)">
+									<div class="anh">
+										<!-- Chứa ảnh ở đây -->
+										<img style ="width:300px; height:170px" id="output"/>
+									</div>
+                                </div>
+
+								<div class="form-group">
+									<label>Chi tiết sản phẩm</label>
+									<textarea name="detail" id="detail" class="form-control" ></textarea>
+      								<script>CKEDITOR.replace('detail');</script>
+								</div>
+                        </div>
+                        <div class="col-md-3">
+
+								<div class="form-group">
+									<label>Giá</label>
+									<input name="price" class="form-control" type="number" value="0" min="0" step="1" max="1000000000">
+								</div>
+								<div class="form-group">
                                 <label>Trạng thái </label>
                                 <select name="status" class="form-control">
                                     <option value="1">Hoạt động</option>
                                     <option value="0">Ngừng hoạt động</option>
                                 </select>
                             </div>
-							<div class="form-group">
-									<div class="anh">
-										<!-- Chứa ảnh ở đây -->
-										<img style ="width:300px; height:170px" id="output"/>
-									</div>
-                                    <label>Ảnh đại diện</label>
-                                    <input type="file"  id="image_list" name="img" onchange="loadFile(event)">
-                                </div>
-                        </div>
-                        <div class="col-md-3">
-
-                            <!-- <div class="form-group">
-                                <label>Hình ảnh <span class = "maudo">(*)</span></label>
-                                <input type="file" name="img" class="form-control" required="">
-                                <div class="error" id="password_error"><?php echo form_error('img')?></div>
-                            </div> -->
 
 
-                            </div>
+                         </div>
                     </div>
                 </div><!-- /.box -->
             </div><!-- /.row -->

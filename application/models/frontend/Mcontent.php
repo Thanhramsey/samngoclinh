@@ -40,4 +40,13 @@ class Mcontent extends CI_Model {
         $query=$this->db->get($this->table);
         return $query->result_array();
     }
+
+
+	public function content_list_all(){
+        $this->db->where('trash', 1);
+        $this->db->where('status', 1);
+        $this->db->order_by('created', 'desc');
+        $query=$this->db->get($this->table);
+        return $query->result_array();
+    }
 }
