@@ -9,7 +9,7 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav" style="height: 52px;  padding: 1px">
                 <li class="dropdown notifications-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="display:none">
                       <i class="fa fa-bell-o"></i>
                       <span class="label label-warning">
                           <?php
@@ -18,14 +18,14 @@
                           echo  $approved+$not_approved;
                           ?>
                       </span>
-                  </a>
+                  	</a>
                   <ul class="dropdown-menu">
                       <li>
                         <ul class="menu">
                           <li>
                             <a href="#">
                               <i class="fa fa-users text-aqua"></i>
-                              <?php echo $this->Morders->orders_count_header_not();?> 
+                              <?php echo $this->Morders->orders_count_header_not();?>
                               Đơn hàng chưa duyệt
                           </a>
                       </li>
@@ -35,8 +35,8 @@
                 <ul class="menu">
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 
-                      <?php echo $this->Morders->orders_count_header();?> 
+                      <i class="fa fa-users text-aqua"></i>
+                      <?php echo $this->Morders->orders_count_header();?>
                       Đơn hàng đang giao
                   </a>
               </li>
@@ -51,7 +51,7 @@
         <span>Website</span>
     </a>
 </li>
-<?php 
+<?php
 $image='';
 if($user['img']){
     $image=$user['img'];

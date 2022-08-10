@@ -27,15 +27,15 @@
 								</div>
 								<div class="form-group">
 									<label>Hình ảnh <span class="maudo">(*)</span></label>
-									<div class="anh">
+									<div class="anh" style ="width:300px; height:280px; border:1px dashed black;border-radius:10px; padding: 5px; margin-bottom:10px">
 										<!-- Chứa ảnh ở đây -->
-										<img style="width:300px; height:170px" id="output" src="./public/assets/images/<?php echo $row['img'] ?>" />
+										<img style="width:100%; height:100%;border-radius:10px" id="output" src="./public/assets/images/<?php echo $row['img'] ?>" />
 									</div>
 									<input type="file" name="img" class="form-control" onchange="loadFile(event)">
 									<div class="error" id="password_error"><?php echo form_error('img') ?></div>
 								</div>
 								<div class="form-group">
-									<label>Chi tiết sản phẩm</label>
+									<label>Chi tiết sản phẩm<span class = "maudo">(*)</span></label>
 									<textarea name="detail" id="detail" class="form-control"><?php echo $row['detail'] ?></textarea>
 									<script>
 										CKEDITOR.replace('detail');
@@ -45,7 +45,7 @@
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label>Giá</label>
+									<label>Giá <span style="color:red;font-style:italic">(* Để 0 nếu chưa có giá)</span></label>
 									<input name="price" class="form-control" type="number" value="<?php echo $row['price'] ?>" min="0" step="1" max="1000000000">
 								</div>
 								<div class="form-group">

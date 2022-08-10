@@ -26,7 +26,7 @@ class Sliders extends CI_Controller {
 		$this->data['strphantrang']=$this->phantrang->PagePer($total, $current, $limit, $url='admin/sliders');
 		$this->data['list']=$this->Msliders->slider_all($limit,$first);
 		$this->data['view']='index';
-		$this->data['title']='Quản lý slider';
+		$this->data['title']='Quản lý sản phẩm';
 		$this->load->view('backend/layout', $this->data);
 	}
 
@@ -95,7 +95,6 @@ class Sliders extends CI_Controller {
 		$this->load->library('session');
 		$this->load->library('alias');
 		$this->form_validation->set_rules('name', 'Tên sản phẩm', 'required');
-		$this->form_validation->set_rules('name', 'Tên hình ảnh', 'required');
 		$this->form_validation->set_rules('price', 'Giá', 'required');
 		$this->form_validation->set_rules('detail', 'Chi tiết', 'required');
 		if ($this->form_validation->run() == TRUE)
@@ -119,9 +118,16 @@ class Sliders extends CI_Controller {
 				$data = $this->upload->data();
 				$mydata['img']=$data['file_name'];
 			}
-			// echo "<pre>---In ra---\n".print_r($mydata)."</pre>";
 			$this->Msliders->slider_update($mydata, $id);
-			$this->session->set_flashdata('success', 'Cập nhật slider thành công');
+			$this->load->helper('file');
+			$filename= $this->data['row']['img'];
+			$message = "";
+			if (unlink("public/assets/images/$filename")) {
+				$message = "Cập nhật sản phẩm thành công";
+			} else {
+				$message = 'There was a error deleting the file ' . $filename;
+			}
+			$this->session->set_flashdata('success', $message);
 			redirect('admin/sliders/','refresh');
 		}
 		$this->data['view']='update';
@@ -147,7 +153,7 @@ class Sliders extends CI_Controller {
 	{
 		$mydata= array('trash' => 0);
 		$this->Msliders->slider_update($mydata, $id);
-		$this->session->set_flashdata('success', 'Xóa slider vào thùng rác thành công');
+		$this->session->set_flashdata('success', 'Xóa sản phẩm vào thùng rác thành công');
 		redirect('admin/sliders','refresh');
 	}
 
@@ -157,21 +163,29 @@ class Sliders extends CI_Controller {
 		$status=($row['status']==1)?0:1;
 		$mydata= array('status' => $status);
 		$this->Msliders->slider_update($mydata, $id);
-		$this->session->set_flashdata('success', 'Cập nhật slider thành công');
+		$this->session->set_flashdata('success', 'Cập nhật sản phẩm thành công');
 		redirect('admin/sliders','refresh');
 	}
 
 	public function restore($id)
 	{
 		$this->Msliders->slider_restore($id);
-		$this->session->set_flashdata('success', 'Khôi phục slider thành công');
+		$this->session->set_flashdata('success', 'Khôi phục sản phẩm thành công');
 		redirect('admin/sliders/recyclebin','refresh');
 	}
 
 	public function delete($id)
 	{
+		$row=$this->Msliders->slider_detail($id);
+		$this->load->helper('file');
+			$filename= $row['img'];
+			if (unlink("public/assets/images/$filename")) {
+				$message = "Cập nhật sản phẩm thành công";
+			} else {
+				$message = 'There was a error deleting the file ' . $filename;
+			}
 		$this->Msliders->slider_delete($id);
-		$this->session->set_flashdata('success', 'Xóa slider thành công');
+		$this->session->set_flashdata('success', 'Xóa sản phẩm thành công');
 		redirect('admin/sliders/recyclebin','refresh');
 	}
 

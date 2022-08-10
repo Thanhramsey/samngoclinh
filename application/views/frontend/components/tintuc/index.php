@@ -68,8 +68,9 @@
                         <nav class="navbar navbar-expand-lg">
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div class="navbar-nav ml-auto d-flex align-items-center">
-                                    <a class="nav-link home active link " href="trang-chu">Trang chủ</a>
-                                    <a class="nav-link link" href="tin-tuc">Tin tức</a>
+                                    <a class="nav-link home  link " href="trang-chu">Trang chủ</a>
+									<a class="nav-link  link " href="sanpham">Sản phẩm</a>
+                                    <a class="nav-link link active" href="tin-tuc">Tin tức</a>
                                     <span class="menu-line link"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                                 </div>
                             </div>
@@ -100,6 +101,9 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="trang-chu">Trang chủ</a>
+                                </li>
+								<li class="nav-item">
+                                    <a class="nav-link" href="sanpham">Sản phẩm</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="tin-tuc">Tin tức</a>

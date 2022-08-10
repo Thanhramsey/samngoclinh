@@ -233,7 +233,7 @@
                     </div>
                     <div class="col-12 col-lg-10 p-lg-0" style="padding-left:10px !important">
                         <h4 class="mb-3">Đã có hơn</h4>
-                        <p>10 năm kinh nghiệm trong nghề</p>
+                        <p>5 năm kinh nghiệm trong nghề</p>
                     </div>
                 </div>
                 <!-- Item -->
@@ -485,7 +485,9 @@
                 </div>
                 <!-- Contact Form -->
                 <form class="contact-form" id="contact-form-data">
-                    <div id="result"></div>
+                    <div id="result">
+					<h6 class="text-success" style="display:none">Thông tin của bạn đã được lưu lại , chúng tôi sẽ liên lạc lại với bạn sớm nhất.</h6>
+					</div>
                     <!-- Name Field -->
                     <div class="form-group">
                         <input class="form-control" type="text" placeholder="Your Name" required="" id="name" name="userName">
@@ -500,10 +502,10 @@
                     </div>
                     <!-- Message Field -->
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="Chi tiết" id="message" name="userMessage"></textarea>
+                        <textarea class="form-control" placeholder="Chi tiết" id="description" name="description"></textarea>
                     </div>
                     <!--Button-->
-                    <a href="javascript:void(0);" id="submit_btn" class="contact_btn btn button btn-medium btn-rounded btn-grey w-100 d-block mt-5">Send Message</a>
+					<button type="button" onclick="saveLienHe()" class="btn button btn-medium btn-rounded btn-grey w-100 d-block mt-5" id="cf-submit" name="submit">Gửi</button>
                 </form>
             </div>
         </div>
@@ -579,5 +581,46 @@
 <script src="public/vendor/js/contact_us.js"></script>
 <script src="public/vendor/js/swiper.min.js"></script>
 <script src="public/coffee/js/script.js"></script>
+
+<script>
+		function saveLienHe(){
+			var strurl = "<?php echo base_url(); ?>" + 'lienhe/insertCmt';
+			var name = $("#name").val();
+			var email = $("#email").val();
+			var phone = $("#phone").val();
+			var description = $("#description").val();
+			var validate = false;
+			if (name === "" ) {
+				$("#name").focus();
+			} else if (phone == "") {
+				$("#phone").focus();
+			}else if (description == "") {
+				$("#description").focus();
+			}else{
+				validate = true;
+			}
+			if (validate) {
+				jQuery.ajax({
+					url: strurl,
+					type: 'POST',
+					dataType: 'json',
+					data: {
+						name:name,
+						phone:phone,
+						email:email,
+						description:description
+					},
+					success: function(data) {
+						// window.location.reload(true);
+						$(".text-success").show();
+						$("#name").val("");
+						$("#phone").val("");
+						$("#email").val("");
+						$("#description").val("");
+					}
+				});
+			}
+		}
+	</script>
 </body>
 </html>

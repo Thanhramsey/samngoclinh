@@ -61,7 +61,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4 col-lg-2">
-                        <a class="navbar-brand link scroll" href="trang-chu">
+                        <a class="navbar-brand link"  href="<?php echo base_url() ?>trang-chu">
                             <img src="<?php echo base_url() ?>/public/coffee/images/logo.png" alt="logo">
                         </a>
                     </div>
@@ -70,6 +70,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div class="navbar-nav ml-auto d-flex align-items-center">
                                     <a class="nav-link home active link " href="<?php echo base_url() ?>trang-chu">Trang chủ</a>
+									<a class="nav-link home active link " href="<?php echo base_url() ?>sanpham">Sản phẩm</a>
                                     <a class="nav-link link" href="<?php echo base_url() ?>tin-tuc">Tin tức</a>
                                     <span class="menu-line link"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                                 </div>
@@ -101,6 +102,9 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo base_url() ?>trang-chu">Trang chủ</a>
+                                </li>
+								li class="nav-item">
+                                    <a class="nav-link" href="<?php echo base_url() ?>sanpham">Sản phẩm</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo base_url() ?>tin-tuc">Tin tức</a>
